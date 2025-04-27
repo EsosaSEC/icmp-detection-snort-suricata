@@ -95,6 +95,19 @@ ping 8.8.8.8
 - Snort: `/var/log/snort/alert`
 - Suricata: `/var/log/suricata/fast.log`
 
+## Troubleshooting
+- No Alerts:
+  - Verify the network interface (ifconfig or ip link).
+  - Ensure the HOME_NET range matches your network.
+  - Check rule syntax in local.rules.
+
+- Configuration Errors:
+   - Run test commands (snort -T or suricata -T) to identify issues.
+
+- Permissions:
+    - Use sudo for all commands, as both tools require root privileges.
+
+
 ## Future Enhancements
 - Expand rules to detect advanced threats (e.g., TCP port scans, malware C2 traffic).
 - Integrate with SIEM tools for centralized log analysis.
